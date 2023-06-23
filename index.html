@@ -7,6 +7,10 @@
       content="Site buscador de informações de Pomemons"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Pokedex - HR</title>
   </head>
@@ -38,7 +42,25 @@
 
     <main>
       <section>
-        <div class="bg_capa"></div>
+        <div class="bg-capa">
+          <div class="card-capa">
+            <div class="container">
+              <div class="search-bar">
+                <form action="" method="post">
+                  <i class="fa fa-search search-icon"></i>
+                  <input
+                    class="input-search"
+                    type="search"
+                    name="inputSearch"
+                    id="searchBar"
+                    placeholder="Pesquise aqui seu pokemon"
+                  />
+                  <button class="button-search" type="submit">Pesquisar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
