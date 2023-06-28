@@ -52,28 +52,34 @@
                 name="inputSearch"
                 id="searchBar"
                 placeholder="Pesquise aqui seu Pokemon pelo nome ou número"
+                required
               />
               <button class="button-search" type="submit">Pesquisar</button>
             </form>
           </div>
         </div>
       </section>
+      <div class="pokedex">
+        <img
+          src="assets/images/chamander.gif"
+          alt="pokemon"
+          class="img-pokemon"
+        />
 
-      <section id="card-pokedex">
-        <div class="card-container">
-          <div class="container">
-            <section id="pokedex">
-              <figure class="img-pokedex">
-                <img src="assets/images/pokedex.png" alt="" />
-
-                <figure class="pokemon">
-                  <img src="assets/images/chamander.gif" alt="" />
-                </figure>
-              </figure>
-            </section>
-          </div>
+        <h1 class="pokemon-data">
+          <span class="pokemon-number">1</span> -
+          <span class="pokemon-name">charmander</span>
+        </h1>
+        <div class="submit-data">
+          <button class="btn-prev btn">&lt; PREV</button>
+          <button class="btn-next btn">NEXT &gt;</button>
         </div>
-      </section>
+        <img
+          src="assets/images/pokedex.png"
+          alt="pokedex"
+          class="img-pokedex"
+        />
+      </div>
     </main>
 
     <script src="assets/js/script.js"></script>

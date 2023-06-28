@@ -22,7 +22,7 @@ main{
 }
 .container{
     margin: 0 auto;
-    max-width: 1080px;
+    max-width: 1280px;
     width: 100%;
     height: 100%;
 }
@@ -52,6 +52,7 @@ main{
 }
 .itens-list{
     display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -79,17 +80,13 @@ main{
 
 /* BG CAPA */
 
-.bg-capa{
-    position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+body{
     background-image: url('../images/background.jpg');
-    background-position: center;
+    background-position: 100% 30%;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -99;
+    text-align: center;
+    min-height: 100vh;
 }
 .card-capa{
     background-color: rgba(0, 0, 0, 0.7);
@@ -169,4 +166,49 @@ main{
     position: absolute;
     top: 30%;
     left: 37%;
+}
+.pokedex{
+    height: 100%;
+    display: inline-block;
+    margin-top: 1%;
+    position: relative;
+    padding: 15px;
+}
+.img-pokedex{
+    width: 100%;
+    max-width: 425px;
+}
+.img-pokemon{
+    height: 18%;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+.pokemon-data{
+    position: absolute;
+    top: 55%;
+    right: 25%;
+    font-size: clamp(8px, 5vw, 25px);
+    color: #7c7c7c;
+}
+.pokemon-name{
+    color: #1a1a1a;
+    text-transform: capitalize;
+}
+
+.submit-data{
+    position: absolute;
+    top: 70%;
+    right: 4%;
+    width: 100%;
+}
+.btn{
+    padding: 4%;
+    font-weight: 600;
+    font-size: clamp(8px, 5vw, 20px);
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: -3px 3px 0 #7c7c7c, -5px 5px 0 #000;
 }
