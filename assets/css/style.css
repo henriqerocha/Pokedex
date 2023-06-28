@@ -14,7 +14,7 @@ header{
     background-color: #ff9000;
 }
 main{
-    height: 85vh;
+    height: 100%;
 }
 #card-pesquisa{
     width: 100%;
@@ -216,4 +216,17 @@ body{
 }
 .btn:active{
     box-shadow: -3px 3px 0 #7c7c7c inset;
+}
+
+
+/* Footer */
+footer{
+    height: 10vh;
+    background-color: #db2525;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 5%;
 }

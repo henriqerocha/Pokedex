@@ -11,7 +11,7 @@ document.getElementById('searchBar').addEventListener('focus', function() {
 
 // ------------------------------------------------------------------------
 
-// Função para obter informações e imagens de um Pokémon
+// Variáveis globais 
 
 const pokemonName = document.querySelector('.pokemon-name');
 const pokemonNumber = document.querySelector('.pokemon-number');
@@ -23,6 +23,7 @@ const buttonNext = document.querySelector('.btn-next');
 
 let searchPokemon = 1;
 
+//função para buscar dados da API
 async function fetchPokemon (pokemon){
   const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
   
@@ -33,6 +34,7 @@ async function fetchPokemon (pokemon){
   }
 }
 
+//função para renderizar os dados da API
 async function renderPokemon(pokemon){
 
   pokemonName.innerHTML = 'Loading...';
@@ -54,6 +56,7 @@ async function renderPokemon(pokemon){
   
 }
 
+//Evento da barra de pesquisa
 form.addEventListener('submit', (event) =>{
   event.preventDefault();
 
@@ -61,6 +64,7 @@ form.addEventListener('submit', (event) =>{
   inputSearch.value = '';
 });
 
+//Evento dos botões de PREV e NEXT
 buttonPrev.addEventListener('click', () =>{
   if(searchPokemon > 1){
     searchPokemon -= 1;
@@ -74,4 +78,7 @@ buttonNext.addEventListener('click', () =>{
   renderPokemon(searchPokemon);
 });
 
+//---------------------------------------------------------------------------
+
+//chama a funcao de renderizar colocando o pokemon padrao como 1
 renderPokemon(searchPokemon);
