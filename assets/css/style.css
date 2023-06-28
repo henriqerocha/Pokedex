@@ -211,4 +211,10 @@ body{
     margin: 10px;
     cursor: pointer;
     box-shadow: -3px 3px 0 #7c7c7c, -5px 5px 0 #000;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+.btn:active{
+    box-shadow: -3px 3px 0 #7c7c7c inset;
+    font-size: clamp(7px, 5vw, 18px);
 }

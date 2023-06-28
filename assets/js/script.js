@@ -12,26 +12,25 @@ document.getElementById('searchBar').addEventListener('focus', function() {
 // ------------------------------------------------------------------------
 
 // Função para obter informações e imagens de um Pokémon
-function getPokemonData(pokemonName) {
-  const url = `https://pokedexapi.co/api/v1/pokemon/${pokemonName}`;
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      // Manipule os dados recebidos como desejar
-      namePokemon.innerHTML = 'Loading...';
-      console.log(data);
+const pokemonName = document.querySelector('.pokemon-name');
+const pokemonNumber = document.querySelector('.pokemon-number');
+const pokemonImage = document.querySelector('.img-pokemon');
 
-      // Exemplo: exiba o nome do Pokémon
-      console.log(data.name);
+async function fetchPokemon (pokemon){
+  const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+  
+  const data = await APIResponse.json();
 
-      // Exemplo: exiba a URL da imagem do Pokémon
-      console.log(data.sprites.front_default);
-    })
-    .catch(error => {
-      console.log('Ocorreu um erro:', error);
-    });
+  return data;
 }
 
-// Chamando a função com o nome do Pokémon desejado (por exemplo, Pikachu)
-getPokemonData('pikachu');
+async function renderPokemon(pokemon){
+  const data = await fetchPokemon(pokemon);
+
+  pokemonName.innerHTML = data.name;
+  pokemonNumber.innerHTML = data.id;
+  pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+}
+
+renderPokemon(9);
